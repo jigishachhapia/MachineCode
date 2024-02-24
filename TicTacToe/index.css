@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.tic-tac-toe {
+    
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
