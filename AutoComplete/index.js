@@ -17,7 +17,7 @@ function displayFilteredData(filteredData) {
 
     filteredData.forEach((item) => {
         const liEle = document.createElement("li");
-        liEle.innerHTML = item.search;
+        liEle.innerHTML = item;
         liEle.className = "suggestion_item";
         ulEle.appendChild(liEle);
     });
@@ -30,11 +30,25 @@ function displayFilteredData(filteredData) {
 }
 async function getFilteredData() {
 
-        const res = await fetch("./data.json");
+        const res = await fetch(`https://freetestapi.com/api/v1/authors?search=${inputBox.value}`);
         const jsondata = await res.json();
-        console.log("inputbox",inputBox.value)
-        const filteredData = jsondata.filter((item)=> item.search.toLowerCase().includes(inputBox.value.toLowerCase()));
-        console.log(filteredData,"filteredData")
-        displayFilteredData(filteredData);
+       // console.log("inputbox",inputBox.value)
+        //const filteredData = jsondata.filter((item)=> item.search.toLowerCase().includes(inputBox.value.toLowerCase()));
+        //console.log(filteredData,"filteredData")
+        console.log("author",jsondata);
+        displayFilteredData(jsondata.map((author)=> author.name));
     }
-inputBox.addEventListener("keyup", getFilteredData);
+
+function debounceFetch(fun, delay) {
+    let timer = null;
+    return (...args) => {
+        if(timer)
+            clearTimeout(timer);
+        timer = setTimeout(() => {
+            fun(...args)
+            timer = null;
+        }, delay)
+    }
+
+}
+inputBox.addEventListener("keyup", debounceFetch(getFilteredData, 500));
