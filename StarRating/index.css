@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.ratingContainer {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(21, 65, 151);
+    border-radius: 5px;;
+    color:#ccc;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    row-gap:10px;
+}
+.barRating {
+    display:flex;
+    flex-direction: row;  
+    column-gap: 5px;
+    margin: 5px;
+    padding: 10px;
+    align-items: center;
+}
+.barRatingContainer {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ratingStar::before {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: gold;
+}
+.ratingStars {
+    position:relative;
+}
+.ratingStars::before {
+    
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+}
+.centerTotalCount{
+    display:flex;
+    justify-content: center;
+}
+.centerRating {
+    display: flex;
+    justify-content: center;
+}
+.bar {
+    background-color: gold;
+    position: absolute;
+    border-radius: 2px;
+    left:0px;
+    top:0px;
+    height: 10px;
+}
+.verticalBar {
+    border-left: 1px solid rgb(50, 49, 49);
+}
+.progress {
+    width: 450px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 2px;
+    position: relative;
+}
+.ratingStarsFilled {
+    position: absolute;
+    left: 0px;
+    top:0px;
+    overflow: hidden; /* clip or hide overflowed star*/
+    white-space: nowrap; /* to allow fragment of star to be filled*/
+    width: 0;
+}
+.ratingStarsFilled::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: gold;  
+}
