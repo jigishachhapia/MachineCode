@@ -1,0 +1,25 @@
+.ratingContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating {
+    display: flex;
+    padding :10px;
+}
+.star {
+    padding: 10px;
+}
+.star::before{
+    content:"\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:#ccc;
+
+}
+.filled::before {
+    content:"\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: gold;
+}

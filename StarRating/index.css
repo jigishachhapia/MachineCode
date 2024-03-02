@@ -46,11 +46,11 @@
 .ratingStars {
     position:relative;
 }
-.ratingStars::before {
+.ratingStars::before { /*::before necessary to render star*/
     
     content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; /*necessary to render star*/
+    font-weight: 900; /*necessary to render star*/
     color: #ccc;
 }
 .centerTotalCount{
