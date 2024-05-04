@@ -1,0 +1,23 @@
+[data-theme="light"] {
+  --bg-color: #fff;
+  --color: #443c3c;
+  --heading-color: #bd6c6c;
+  --switch-color: #dcd215;
+  --switch-slider: #fb6c12f8;
+}
+
+[data-theme="dark"] {
+  --bg-color: #443c3c;
+  --color: #fff;
+  --heading-color: #69bc76;
+  --switch-color: #9c9696d9;
+  --switch-slider: #fff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color)
+}
+h1{
+  color: var(--heading-color);
+}
