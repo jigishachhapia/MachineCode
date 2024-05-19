@@ -1,0 +1,22 @@
+.todoTextInput {
+    height: 25px;
+    border-radius:  4px;
+    width: 300px;
+}
+.todoList li {
+    list-style: none;
+    width: 300px;
+    display:flex;
+    align-items: center;
+    gap: 5px;
+}
+.todoList li span {
+    flex: 1;
+}
+.submitBtn {
+    height: 30px;
+    border-radius:  4px;
+    width: 75px;
+    color: #454545;
+
+}
