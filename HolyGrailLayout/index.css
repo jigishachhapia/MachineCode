@@ -1,0 +1,38 @@
+body{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+}
+
+.header, .footer{
+background-color: #565252;
+color: white;
+padding: 10px;
+}
+
+.container{ 
+    display:flex;
+    flex:1;
+}
+.main{
+    background-color: lightgray;
+    flex:1;
+}
+.side-content {
+    width: 200px;
+}
+.left-side {
+    background-color: lightpink;
+}
+.right-side{
+    background-color: lightblue;
+}
+@media only screen and (max-width:480px) {
+    .container {
+        flex-direction: column;
+    }
+    .side-content,
+    .main {
+        width: 100%;
+    }
+}
