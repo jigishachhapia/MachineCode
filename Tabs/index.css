@@ -1,0 +1,32 @@
+.tabListContainer {
+    
+    border-bottom: 1px black solid;
+}
+
+.tabListContainer ul {
+    list-style-type: none;
+    display:flex;
+    font-size: 25px;
+    gap: 20px;
+    font-weight: 300;
+    padding-inline-start: 20px;
+}
+
+.tabContentContainer{
+    padding: 20px;
+    background-color: whitesmoke;
+}
+[data-tabcontentid] {
+    display:none;
+}
+.active[data-tabcontentid]{
+    display: block;
+}
+[data-tabid] {
+    background-color: white;
+    padding: 10px;
+}
+.active[data-tabid] {
+    background-color: #ccc;
+    padding: 10px;
+}
