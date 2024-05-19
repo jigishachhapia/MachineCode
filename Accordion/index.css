@@ -1,0 +1,17 @@
+.accordionContainer {
+
+}
+
+.accItem {
+    border: 1px solid  grey;
+    margin: 10px;
+
+}
+.accHeader {
+    background-color: lightgrey;
+    padding: 10px;
+}
+.accContent {
+    padding : 10px;
+    
+}
