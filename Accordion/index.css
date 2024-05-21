@@ -15,3 +15,8 @@
     padding : 10px;
     
 }
+/* If you want to apply css on active & accContent when both classes are present
+use below
+.accContent.active{
+    display:block;
+} but this is not supported in IE 6*/
